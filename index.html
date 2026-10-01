@@ -4,6 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kumar Prabhash Anand — Senior Software Engineer</title>
+<meta name="description" content="Kumar Prabhash Anand, Senior Software Engineer in Berlin. Backend and distributed systems in Java, open source (OpenFeign, loremfile.dev), and AI tools for developers.">
+<link rel="canonical" href="https://kumarprabhashanand.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://kumarprabhashanand.github.io/">
+<meta property="og:title" content="Kumar Prabhash Anand — Senior Software Engineer">
+<meta property="og:description" content="Backend and distributed systems in Java, open source (OpenFeign, loremfile.dev), and AI tools for developers. Berlin.">
+<meta name="twitter:card" content="summary">
+<link rel="me" href="https://github.com/kumarprabhashanand">
+<link rel="me" href="https://www.linkedin.com/in/kumarprabhashanand">
+<noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -363,7 +373,7 @@
   }
 
   /* CERTS */
-  .certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 16px; }
   .cert-card {
     border: 1px solid var(--border);
     border-radius: 8px; padding: 24px;
@@ -385,6 +395,12 @@
     font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.95rem;
     line-height: 1.3; color: var(--text);
   }
+
+  /* PROJECTS & WRITING (link cards) */
+  a.cert-card { display: block; text-decoration: none; }
+  .card-desc { font-size: 0.78rem; line-height: 1.7; color: #94a3b8; margin-top: 10px; }
+  .more-links { margin-top: 28px; font-size: 0.78rem; color: var(--muted); line-height: 1.8; }
+  .more-links a { color: var(--accent); text-decoration: none; }
 
   /* COUNTER STATS */
   .stats-row {
@@ -499,9 +515,10 @@
 <nav>
   <div class="nav-logo">KPA<span>.</span></div>
   <div class="nav-links">
+    <a href="#projects">Open Source</a>
     <a href="#skills">Skills</a>
     <a href="#experience">Experience</a>
-    <a href="#certs">Certs</a>
+    <a href="#writing">Writing</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -516,7 +533,7 @@
       </h1>
       <p class="hero-title">Senior Software Engineer · Berlin, Germany</p>
       <p class="hero-bio">
-        I write code for a living and occasionally pretend to understand distributed systems. At Zalando, I help parcels find their humans. Currently poking at Agentic AI — results pending.
+        I build backend systems for a living, mostly in Java. At Zalando, I help parcels find their humans. Outside work I contribute to open source, write about Java and distributed systems, and build small AI tools for developers.
       </p>
       <div class="hero-cta">
         <a href="https://www.linkedin.com/in/kumarprabhashanand" target="_blank" class="btn btn-primary">LinkedIn ↗</a>
@@ -534,7 +551,7 @@
   <div style="max-width:1100px;margin:0 auto;padding:0 60px;" class="reveal">
     <div class="stats-row">
       <div class="stat">
-        <div class="stat-num" data-count="9">0</div>
+        <div class="stat-num" data-count="9">9+</div>
         <div class="stat-label">Years of writing bugs professionally</div>
       </div>
       <div class="stat">
@@ -542,11 +559,43 @@
         <div class="stat-label">Companies that haven't fired me yet</div>
       </div>
       <div class="stat">
-        <div class="stat-num" data-count="8">0</div>
+        <div class="stat-num" data-count="8">8+</div>
         <div class="stat-label">% less manual toil. Small wins.</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" data-count="21" data-suffix="">21</div>
+        <div class="stat-label">Articles on Medium (and counting)</div>
       </div>
     </div>
   </div>
+
+  <!-- OPEN SOURCE -->
+  <section id="projects">
+    <div class="section-label reveal">Open Source</div>
+    <h2 class="section-title reveal">Things I've built or contributed to</h2>
+    <div class="certs-grid">
+      <a class="cert-card reveal" href="https://github.com/OpenFeign/feign/pull/3454" target="_blank">
+        <div class="cert-provider">OpenFeign ↗</div>
+        <div class="cert-name">HTTP QUERY method (RFC 10008)</div>
+        <div class="card-desc">Added the new QUERY method to Feign core, the mock client and the HTTP cache.</div>
+      </a>
+      <a class="cert-card reveal" href="https://loremfile.dev" target="_blank">
+        <div class="cert-provider">loremfile.dev ↗</div>
+        <div class="cert-name">Free test files for every file type</div>
+        <div class="card-desc">CC0 sample files with stable URLs and a SHA-256 for each one. Lorem Picsum, but for files.</div>
+      </a>
+      <a class="cert-card reveal" href="https://github.com/kumarprabhashanand/java-springboot-code-review" target="_blank">
+        <div class="cert-provider">Claude skill ↗</div>
+        <div class="cert-name">java-springboot-code-review</div>
+        <div class="card-desc">Reviews Java and Spring Boot code for the stuff linters miss: @Transactional traps, N+1 queries, IDOR, race conditions.</div>
+      </a>
+      <a class="cert-card reveal" href="https://github.com/kumarprabhashanand/ai-product-team" target="_blank">
+        <div class="cert-provider">Claude Code agents ↗</div>
+        <div class="cert-name">ai-product-team</div>
+        <div class="card-desc">11 sub-agents that work like a small product team: PM, engineering, code review, QA, security, DevOps.</div>
+      </a>
+    </div>
+  </section>
 
   <!-- SKILLS -->
   <section id="skills">
@@ -636,6 +685,7 @@
             <li>Helping onboard About You warehouses onto the Zalando label platform after acquisition. Lots of meetings. Some code.</li>
             <li>Designing an Agentic AI system (always-on assistant + incident responder) — teaching robots to read our runbooks so we don't have to.</li>
             <li>Fixing addresses, automating the painful stuff, surviving peak traffic… and so it goes.</li>
+            <li>Running hackdays and learning sessions for the team. Wrote Java articles for Baeldung on the side.</li>
           </ul>
         </div>
       </div>
@@ -674,10 +724,45 @@
     </div>
   </section>
 
-  <!-- CERTIFICATIONS -->
+  <!-- WRITING -->
+  <section id="writing">
+    <div class="section-label reveal">Writing</div>
+    <h2 class="section-title reveal">I also write sometimes</h2>
+    <div class="certs-grid">
+      <a class="cert-card reveal" href="https://medium.com/@kumarprabhashanand/ai-llm-for-software-engineers-1-key-concepts-and-terminologies-95717ce9c06f" target="_blank">
+        <div class="cert-provider">Medium · 2026 · 2-part series ↗</div>
+        <div class="cert-name">AI &amp; LLM for Software Engineers</div>
+      </a>
+      <a class="cert-card reveal" href="https://medium.com/@kumarprabhashanand/opentelemetry-explained-what-is-opentelemetry-598201dbdc67" target="_blank">
+        <div class="cert-provider">Medium · 2024 · 2-part series ↗</div>
+        <div class="cert-name">OpenTelemetry Explained</div>
+      </a>
+      <a class="cert-card reveal" href="https://medium.com/@kumarprabhashanand/secure-grpc-apis-with-oauth2-dfaa6e502924" target="_blank">
+        <div class="cert-provider">Medium · 2023 ↗</div>
+        <div class="cert-name">Secure gRPC APIs with OAuth2</div>
+      </a>
+      <a class="cert-card reveal" href="https://blog.devgenius.io/spring-boot-authorization-server-825230ae0ed2" target="_blank">
+        <div class="cert-provider">Dev Genius · 2023 ↗</div>
+        <div class="cert-name">Spring Boot Authorization Server</div>
+      </a>
+      <a class="cert-card reveal" href="https://faun.pub/dont-move-to-http-2-before-reading-this-3a89d0f6f770" target="_blank">
+        <div class="cert-provider">FAUN · 2022 ↗</div>
+        <div class="cert-name">Don't move to HTTP/2 before reading this</div>
+      </a>
+      <a class="cert-card reveal" href="https://towardsdev.com/4-types-of-grpc-apis-with-go-and-java-example-dc4db630fc83" target="_blank">
+        <div class="cert-provider">Towards Dev · 2022 ↗</div>
+        <div class="cert-name">4 Types of gRPC APIs with Go and Java</div>
+      </a>
+    </div>
+    <p class="more-links reveal">
+      21 articles in total on <a href="https://medium.com/@kumarprabhashanand" target="_blank">Medium ↗</a>, plus Java articles on Baeldung and the odd post on <a href="https://dev.to/prabhash_me" target="_blank">dev.to ↗</a>
+    </p>
+  </section>
+
+  <!-- LEARNING -->
   <section id="certs">
-    <div class="section-label reveal">Certifications</div>
-    <h2 class="section-title reveal">Certificates I actually earned</h2>
+    <div class="section-label reveal">Learning</div>
+    <h2 class="section-title reveal">Courses I actually finished</h2>
     <div class="certs-grid">
       <div class="cert-card reveal">
         <div class="cert-provider">DeepLearning.AI</div>
@@ -803,7 +888,7 @@
       if (entry.isIntersecting) {
         const el = entry.target;
         const target = parseInt(el.dataset.count);
-        if (!isNaN(target)) animateCounter(el, target, el.dataset.suffix || '+');
+        if (!isNaN(target)) animateCounter(el, target, el.dataset.suffix ?? '+');
         counterObserver.unobserve(el);
       }
     });
